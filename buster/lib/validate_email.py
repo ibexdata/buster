@@ -11,7 +11,7 @@ from .modules.github import email2github
 from .modules.skype import email2skype
 from .modules.avast import email2breachedaccts
 from .modules.twitter import twitter_search
-from .modules.darksearch import dark_search
+#from .modules.darksearch import dark_search
 from .modules.googledork import google_search
 #from .modules.flickr import email2flickr
 
@@ -70,10 +70,10 @@ def validate_email(email):
 			email_info["exists"]=True
 			accounts.append(github)
 	
-		darksearch_sources=dark_search(email,response[3])
-		if(darksearch_sources != []):
-			email_info["exists"]=True
-			sources.extend(darksearch_sources)
+		#darksearch_sources=dark_search(email,response[3])
+		#if(darksearch_sources != []):
+		#	email_info["exists"]=True
+		#	sources.extend(darksearch_sources)
 		
 		
 		pastes=email_pastes(email,response[4])
