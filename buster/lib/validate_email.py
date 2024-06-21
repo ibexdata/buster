@@ -27,7 +27,7 @@ def validate_email(email):
 		  grequests.get("https://emailrep.io/" + email),
 		  grequests.get("https://myspace.com/search/people?q=" + email),
 		  grequests.get("https://api.github.com/search/users?q=" + email + "+in:email"),
-		  grequests.get('https://darksearch.io/api/search?query="' + email + '"'),
+		  #grequests.get('https://darksearch.io/api/search?query="' + email + '"'),
 		  grequests.get("https://haveibeenpwned.com/api/v2/pasteaccount/" + email,headers=headers),
 		  grequests.post("https://digibody.avast.com/v1/web/leaks",json={"email":email})
 		]
