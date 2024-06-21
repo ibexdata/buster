@@ -21,7 +21,7 @@ A tutorial on how to use Buster can be found [here](https://null-byte.wonderhowt
 clone the repository:
 
 ```bash
-$ git clone git://github.com/sham00n/buster
+$ git clone https://github.com/sham00n/buster
 ```
 
 Once you have a copy of the source, you can install it with:
@@ -33,6 +33,16 @@ $ buster -h
 ```
 -----
 
+## Troubleshooting
+
+You may need to pre-install cython and cchardet first if you are receiving deprecated warnings regarding the build step for either.
+
+```
+pip install cython
+pip install cchardet
+```
+
+Additionally, you may have to use `sudo` to install both, though not advised.
 
 ## API keys
 
@@ -42,7 +52,7 @@ Once you get an API key, add it to the file "api-keys.yaml" and rerun the comman
 
 
 ```bash
-$ python setup.py install
+$ python3 setup.py install
 ```
 
 -----
